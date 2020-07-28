@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{9D1CABB6-8AF9-4A71-8A1C-5986335A7A79}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Serena_5._</RootNamespace>
+    <AssemblyName>Serena 5.4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Speech">
+      <HintPath>..\..\..\Serena 5.3\Serena 5.2 %28LPOO%29\Serena 5.2\bin\Debug\Microsoft.Speech.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\DLL\System.Data.SQLite.dll\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\Reconhecimento_Voz.cs" />
+    <Compile Include="Model\Conexao_BD.cs" />
+    <Compile Include="Model\Conexao_Ditado.cs" />
+    <Compile Include="Model\OBJ_Comando.cs" />
+    <Compile Include="Model\OBJ_Configuracoes.cs" />
+    <Compile Include="Model\Pronuncia_Comandos.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Config_Voz.cs" />
+    <Compile Include="View\Config_Voz.Designer.cs">
+      <DependentUpon>Config_Voz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Criador_Comandos.cs" />
+    <Compile Include="View\Criador_Comandos.Designer.cs">
+      <DependentUpon>Criador_Comandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Exibir_Comandos.cs" />
+    <Compile Include="View\Exibir_Comandos.Designer.cs">
+      <DependentUpon>Exibir_Comandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Importar_Comandos.cs" />
+    <Compile Include="View\Importar_Comandos.Designer.cs">
+      <DependentUpon>Importar_Comandos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tela_Inicio.cs" />
+    <Compile Include="View\Tela_Inicio.Designer.cs">
+      <DependentUpon>Tela_Inicio.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Imagens\Cerebro_giro_Parcial.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Imagens\Cerebro_giro_Completo.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\Config_Voz.resx">
+      <DependentUpon>Config_Voz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Criador_Comandos.resx">
+      <DependentUpon>Criador_Comandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Exibir_Comandos.resx">
+      <DependentUpon>Exibir_Comandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Importar_Comandos.resx">
+      <DependentUpon>Importar_Comandos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tela_Inicio.resx">
+      <DependentUpon>Tela_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model" />
+    <Folder Include="Controller" />
+    <Folder Include="Imagens" />
+    <Folder Include="View" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

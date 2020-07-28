@@ -1,0 +1,6 @@
+O arquivo de dados "Ditado.db" possui 5.965 palavras cadastradas, esse arquivo foi gerado pelo software criado especificamente para a função de ler um arquivo de texto (.TXT) com 320.000 palavras do dicionário portugues e gerar um arquivo .db para ser usado pela assistente pessoal "SERENA", em sua função de reconhecimento livre
+
+Tempo para gerar esse arquivo: 18 minutos
+Tamanho do arquivo: 182 KB
+Quantidade de palavras: 5.965
+

@@ -1,0 +1,14 @@
+DLL necessárias para a Serena 5.4 Iniciar
+-
+System.Data.dll
+System.Data.SQLite.dll
+
+Recursos da maquina consumidos
+-
+CPU Max usada 35,9 MB
+CPU Min usada 3,4 MB
+
+Memoria Max usado 46,6 MB
+Memoria Min usado 13,4 MB
+
+Disco usado 0,1 MB/s
